@@ -1,0 +1,18 @@
+.mainWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background: black;
+}
+
+.photos {
+    width: 90%;
+}
+
+.photo {
+    width: 35%;
+    object-fit: contain;
+    border-radius: 5px;
+    margin: 10px;
+}

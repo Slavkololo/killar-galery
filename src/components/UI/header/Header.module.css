@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(0 0 0 / 67%) 100%);
+}
+
+.header__heading {
+    color: #ffffffc4;
+    text-transform: uppercase;
+    font-size: 5em;
+}

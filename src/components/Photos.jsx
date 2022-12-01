@@ -27,7 +27,11 @@ const Photos = () => {
         setsortedPhotos(photos.filter(photos => photos.name === sort));
         setSelected(event.target.value);
     };
-
+    
+    if (sortedPhotos.length === 0) {
+        setsortedPhotos(photos)
+    }
+    
     return (
         <main className={classes.mainWrapper}>
             <div className={classes.photos}>
@@ -36,10 +40,15 @@ const Photos = () => {
                         sortOptions={sortOptions} 
                         value={selected}
                         onChange={selectHandler}
-                        // defaultVlue={}
+                        defaultValue={'All'}
                     />
                 </div>
-                {sortedPhotos.map(photo => <img className={classes.photo} src={photo.src} alt={photo.name} key={photo.src}/>)}  
+                {sortedPhotos.map(photo => 
+                <img className={classes.photo} 
+                src={photo.src} 
+                alt={photo.name} 
+                key={photo.src}/>
+                )}  
             </div>
         </main>
 
